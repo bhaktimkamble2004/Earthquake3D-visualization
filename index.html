@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Exploring the Global Earthquake Events — interactive geospatial visualization of 1,000 significant earthquake events.">
+  <title>Exploring the Global Earthquake Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="#overview"><span class="brand-mark">◈</span><span>Global Earthquake Events</span></a>
+      <button class="menu-toggle" aria-label="Open navigation">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#statistics">Summary Statistics</a>
+        <a href="#globe">Interactive Globe</a>
+        <a href="#magnitude">Magnitude Analysis</a>
+        <a href="#temporal">Temporal Analysis</a>
+        <a href="#hotspots">Hotspots</a>
+        <a href="#interpretation">Interpretation</a>
+        <a href="#limitations">Limitations</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <div class="hero-copy">
+          <div class="eyebrow">GLOBAL SEISMIC VISUALIZATION</div>
+          <h1>Exploring the<br>Global Earthquake<br>Events</h1>
+          <p class="hero-subtitle">Interactive 3D Visualization of Global Seismic Patterns</p>
+          <p class="hero-text">Explore the spatial distribution, magnitude and concentration of 1,000 significant earthquake events across the globe through an interactive geospatial visualization.</p>
+          <a class="primary-btn" href="#globe">Explore Interactive Globe <span>→</span></a>
+          <div class="student-card">
+            <div class="student-label">STUDENT DETAILS</div>
+            <strong>Bhakti Kamble</strong>
+            <span>M.Sc. Geoinformatics · Semester III</span>
+            <span>Bharati Vidyapeeth Institute of Environment Education &amp; Research</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container narrow">
+        <div class="section-kicker">01 · OVERVIEW</div>
+        <h2>Global Earthquake Events</h2>
+        <p class="lead">Exploring the Global Earthquake Events is an interactive geospatial visualization of 1,000 significant earthquake events distributed across the world. The project uses geographic coordinates and earthquake magnitude to visualize global seismic patterns on an interactive orthographic globe.</p>
+        <p>Users can rotate and zoom the globe, inspect individual earthquake locations and compare magnitude patterns across different regions. The visualization highlights concentrations of significant earthquake activity along major tectonically active regions, particularly around the Pacific Ring of Fire.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="statistics">
+      <div class="container">
+        <div class="section-kicker">02 · SUMMARY STATISTICS</div>
+        <h2>Earthquake Dataset at a Glance</h2>
+        <div class="stat-grid">
+          <article class="stat-card"><span class="stat-value">1,000</span><span class="stat-label">TOTAL EVENTS</span></article>
+          <article class="stat-card"><span class="stat-value">9.1</span><span class="stat-label">MAXIMUM MAGNITUDE</span></article>
+          <article class="stat-card"><span class="stat-value">6.94</span><span class="stat-label">MEAN MAGNITUDE</span></article>
+          <article class="stat-card"><span class="stat-value">6.80</span><span class="stat-label">MEDIAN MAGNITUDE</span></article>
+        </div>
+        <div class="data-table-wrap">
+          <div class="data-row"><span>Minimum Magnitude</span><strong>6.5</strong><span>Standard Deviation</span><strong>0.44</strong></div>
+          <div class="data-row"><span>1st Quartile</span><strong>6.60</strong><span>3rd Quartile</span><strong>7.10</strong></div>
+          <div class="data-row"><span>Latitude Range</span><strong>−61.85° to 71.63°</strong><span>Longitude Range</span><strong>−179.97° to 179.66°</strong></div>
+          <div class="data-row"><span>Geographic Extent</span><strong>Global</strong><span>Records</span><strong>1,000</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="globe">
+      <div class="container">
+        <div class="section-heading-row">
+          <div>
+            <div class="section-kicker">03 · INTERACTIVE GLOBE</div>
+            <h2>Explore Earthquakes in 3D</h2>
+          </div>
+          <a class="colab-link" href="https://colab.research.google.com/drive/1V50MsOcj0j074hgwPMIq27SWoK--Zvfy?usp=sharing" target="_blank" rel="noopener" title="Open Google Colab notebook">
+            <span class="colab-icon">▣</span><span>Open Colab</span>
+          </a>
+        </div>
+        <div class="globe-layout">
+          <div class="embed-card globe-card">
+            <iframe src="embeds/earthquake3D.html" title="Interactive 3D Global Earthquake Globe" loading="lazy"></iframe>
+            <div class="interaction-note">Drag to rotate · Scroll to zoom · Hover for event details</div>
+          </div>
+          <aside class="info-panel">
+            <div class="panel-kicker">METHODS &amp; DATASET</div>
+            <h3>Global Earthquake Events Dataset</h3>
+            <div class="info-item"><span>Source</span><strong>Kaggle – Earthquake Dataset</strong></div>
+            <div class="info-item"><span>Records</span><strong>1,000 events</strong></div>
+            <div class="info-item"><span>Extent</span><strong>Global</strong></div>
+            <div class="info-item"><span>Magnitude</span><strong>6.5 – 9.1</strong></div>
+            <div class="info-item"><span>Variables</span><strong>Latitude · Longitude · Magnitude · Event Time · Depth · Location</strong></div>
+            <div class="workflow">
+              <span>Dataset</span><b>→</b><span>Cleaning</span><b>→</b><span>Analysis</span><b>→</b><span>Visualization</span>
+            </div>
+            <div class="legend"><span class="legend-title">MAGNITUDE</span><div class="legend-line"><i class="dot d1"></i>6.5–6.9</div><div class="legend-line"><i class="dot d2"></i>7.0–7.4</div><div class="legend-line"><i class="dot d3"></i>7.5–7.9</div><div class="legend-line"><i class="dot d4"></i>8.0–8.4</div><div class="legend-line"><i class="dot d5"></i>8.5–9.1</div></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="magnitude">
+      <div class="container">
+        <div class="section-kicker">04 · MAGNITUDE ANALYSIS</div>
+        <h2>Understanding Earthquake Magnitude</h2>
+        <div class="analysis-grid">
+          <div class="embed-card chart-card"><iframe src="embeds/earthquake_magnitude_distribution.html" title="Earthquake Magnitude Distribution" loading="lazy"></iframe></div>
+          <div class="analysis-card"><div class="mini-kicker">MAGNITUDE STATISTICS</div><div class="metric-list"><div><span>Minimum</span><strong>6.5</strong></div><div><span>Maximum</span><strong>9.1</strong></div><div><span>Mean</span><strong>6.94</strong></div><div><span>Median</span><strong>6.80</strong></div><div><span>Std. Deviation</span><strong>0.44</strong></div><div><span>Q1 / Q3</span><strong>6.60 / 7.10</strong></div></div></div>
+        </div>
+        <div class="category-grid">
+          <div><b>6.5–6.9</b><span>Moderate</span></div><div><b>7.0–7.4</b><span>Strong</span></div><div><b>7.5–7.9</b><span>Major</span></div><div><b>8.0–8.4</b><span>Great</span></div><div><b>8.5–9.1</b><span>Extreme</span></div>
+        </div>
+        <p class="small-note">Category counts should be read from the embedded analysis; no unsupported counts are fabricated here.</p>
+      </div>
+    </section>
+
+  <section class="section" id="temporal">
+    <div class="container narrow">
+
+        <div class="section-kicker">05 · TEMPORAL ANALYSIS</div>
+
+        <h2>Earthquake Events Through Time</h2>
+
+        <div class="temporal-image-container">
+            <img
+                src="earthquake_events.jpeg"
+                alt="Line graph showing recorded earthquakes by year"
+                class="temporal-image"
+            >
+        </div>
+
+    </div>
+</section>
+
+    <section class="section section-soft" id="hotspots">
+      <div class="container">
+        <div class="section-kicker">06 · HOTSPOTS</div>
+        <h2>Global Earthquake Hotspots</h2>
+        <div class="embed-card hotspot-card"><iframe src="embeds/hotspot.html" title="Global Earthquake Hotspot Visualization" loading="lazy"></iframe></div>
+        <div class="concentration-box"><div class="mini-kicker">CONCENTRATION RESULTS</div><p>The earthquake events show a non-uniform spatial distribution, with notable concentrations around major tectonically active regions. A prominent concentration is associated with the Pacific Ring of Fire.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="interpretation">
+      <div class="container">
+        <div class="section-kicker">07 · INTERPRETATION</div>
+        <h2>What Does the Pattern Tell Us?</h2>
+        <div class="interpret-grid"><article><span>01</span><h3>Spatial Pattern</h3><p>The earthquake events show an uneven global distribution, with concentrations around major tectonically active regions.</p></article><article><span>02</span><h3>Magnitude Pattern</h3><p>The events range from magnitude 6.5 to 9.1, with a mean of 6.94 and median of 6.80.</p></article><article><span>03</span><h3>Regional Pattern</h3><p>Significant earthquake activity is particularly concentrated around the Pacific Ring of Fire.</p></article><article><span>04</span><h3>Concentration</h3><p>Spatial clustering demonstrates that significant earthquake events are not uniformly distributed across geographic space.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="limitations">
+      <div class="container">
+        <div class="section-kicker">08 · LIMITATIONS</div>
+        <h2>Limitations of the Analysis</h2>
+        <div class="limit-grid"><article><h3>Dataset Limitations</h3><ul><li>Based on 1,000 records in the selected dataset.</li><li>Results depend on source data completeness and accuracy.</li><li>Recorded events do not necessarily represent every seismic event worldwide.</li></ul></article><article><h3>Analytical Limitations</h3><ul><li>Spatial concentration should not be interpreted directly as earthquake hazard.</li><li>Clustering does not establish causation.</li><li>The visualization identifies patterns but does not predict future earthquakes.</li></ul></article><article><h3>Visualization Limitations</h3><ul><li>Interactive visualization is intended for exploration of spatial and statistical patterns.</li><li>Browser/device performance may vary with embedded Plotly content.</li></ul></article></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><div class="footer-kicker">DATA ATTRIBUTION</div><h2>Kaggle · Earthquake Dataset · Plotly · Google Colab</h2></div>
+      <div class="footer-meta"><span>Dataset Source: Kaggle – Earthquake Dataset</span><span>Visualization: Plotly Interactive 3D Globe</span><span>Processing: Google Colab</span></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
